@@ -2,6 +2,7 @@
  * Created by rush on 8/12/16.
  */
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
 
@@ -169,12 +170,53 @@ public class Main {
         //Reverse 3
         //
         ArrayList<Integer> reverse = new ArrayList<>();
-        reverse.add(23);
+        reverse.add(1);
         reverse.add(2);
         reverse.add(3);
-        //ArrayList<Integer> reverseResult = Kata.reverse3(reverse);
+        ArrayList<Integer> reverseResult = Kata.reverse3(reverse);
 
-        //System.out.printf("Kata.reverse(%s) -> %s\n", reverse, reverseResult);
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse, reverseResult);
+
+        ArrayList<Integer> reverse2 = new ArrayList<>();
+        reverse2.add(5);
+        reverse2.add(11);
+        reverse2.add(9);
+        ArrayList<Integer> reverseResult2 = Kata.reverse3(reverse2);
+
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse2, reverseResult2);
+
+        ArrayList<Integer> reverse3 = new ArrayList<>();
+        reverse3.add(7);
+        reverse3.add(0);
+        reverse3.add(0);
+        ArrayList<Integer> reverseResult3 = Kata.reverse3(reverse3);
+
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse3, reverseResult3);
+
+        ArrayList<Integer> reverse4 = new ArrayList<>();
+        reverse4.add(23);
+        reverse4.add(2);
+        reverse4.add(3);
+        ArrayList<Integer> reverseResult4 = Kata.reverse3(reverse4);
+
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse4, reverseResult4);
+
+        ArrayList<Integer> reverse5 = new ArrayList<>();
+        reverse5.add(23);
+        reverse5.add(2);
+        reverse5.add(33);
+        ArrayList<Integer> reverseResult5 = Kata.reverse3(reverse5);
+
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse5, reverseResult5);
+
+        ArrayList<Integer> reverse6 = new ArrayList<>();
+        reverse6.add(23);
+        reverse6.add(23);
+        reverse6.add(53);
+        ArrayList<Integer> reverseResult6 = Kata.reverse3(reverse6);
+
+        System.out.printf("Kata.reverse(%s) -> %s\n", reverse6, reverseResult6);
+
 
         //
         //Sum First Penultimate
@@ -229,6 +271,15 @@ public class Main {
 
         System.out.printf("Kata.sumFirstPenultimate(%s) -> %s\n", sum6, sumResult6);
 
+        //
+        //Map Bully
+        //
+        HashMap<String, String> data = new HashMap<>();
+        data.put("b", "dirt");
+        data.put("a", "candy");
+        HashMap<String, String> dataResult = Kata.mapBully(data);
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data, dataResult);
 
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by rush on 8/12/16.
@@ -33,8 +34,10 @@ public class Kata {
     public static ArrayList<Integer> reverse3(ArrayList<Integer> nums) {
         int first = nums.get(0);
         int last = nums.get(2);
-        nums.remove(0);
         nums.remove(2);
+        nums.remove(0);
+        nums.add(first);
+
         nums.add(0, last);
 
         return nums;
@@ -49,6 +52,12 @@ public class Kata {
             return first + second;
         } else {
             return first + secondLast;
+        }
+    }
+
+    public static HashMap <String, String> mapBully(HashMap<String, String> map){
+        if (map.containsKey("a") && map.containsValue(" ")){
+
         }
     }
 }
