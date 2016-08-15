@@ -6,8 +6,9 @@ import java.util.HashMap;
  */
 public class Kata {
     public static boolean firstLast6(ArrayList<Integer> nums) {
+        ArrayList<Integer> copy = new ArrayList<>(nums);
 
-        if ((nums.get(0) == 6) || (nums.get((nums.size() -1)) == 6)) {
+        if ((copy.get(0) == 6) || (copy.get((copy.size() -1)) == 6)) {
             return true;
         } else {
             return false;
@@ -15,7 +16,8 @@ public class Kata {
     }
 
     public static boolean sameFirstLast(ArrayList<Integer> nums) {
-        if (((nums.size()) >= 1) && (nums.get(0) == (nums.get((nums.size() - 1))))) {
+        ArrayList<Integer> copy = new ArrayList<>(nums);
+        if (((copy.size()) >= 1) && (copy.get(0) == (copy.get((copy.size() - 1))))) {
             return true;
         } else {
             return false;
@@ -24,41 +26,74 @@ public class Kata {
 
 
    public static ArrayList<Integer> rotateLeft3(ArrayList<Integer> nums){
-        int first = nums.get(0);
-        nums.remove(0);
-        nums.add((nums.size()), first);
+       ArrayList<Integer> copy = new ArrayList<>(nums);
+        int first = copy.get(0);
+        copy.remove(0);
+        copy.add((copy.size()), first);
 
-        return nums;
+        return copy;
     }
 
     public static ArrayList<Integer> reverse3(ArrayList<Integer> nums) {
-        int first = nums.get(0);
-        int last = nums.get(2);
-        nums.remove(2);
-        nums.remove(0);
-        nums.add(first);
+        ArrayList<Integer> copy = new ArrayList<>(nums);
+        int first = copy.get(0);
+        int last = copy.get(2);
+        copy.remove(2);
+        copy.remove(0);
+        copy.add(first);
 
-        nums.add(0, last);
+        copy.add(0, last);
 
-        return nums;
+        return copy;
     }
 
     public static int sumFirstPenultimate(ArrayList<Integer> nums){
-        int first = nums.get(0);
-        int second = nums.get(1);
-        int secondLast = nums.get((nums.size() - 2));
+        ArrayList<Integer> copy = new ArrayList<>(nums);
+        int first = copy.get(0);
+        int second = copy.get(1);
+        int secondLast = copy.get((copy.size() - 2));
 
-        if ((nums.size() <= 2)){
+        if ((copy.size() <= 2)){
             return first + second;
         } else {
             return first + secondLast;
         }
     }
 
-    public static HashMap <String, String> mapBully(HashMap<String, String> map){
-        if (map.containsKey("a") && map.containsValue(" ")){
 
+    public static HashMap <String, String> mapBully(HashMap<String, String> map){
+        HashMap<String, String> copy = new HashMap<>(map);
+        if (copy.containsKey("a") && !(copy.containsValue(""))){
+            copy.put("b", copy.get("a"));
+            copy.replace("a", "");
+            return copy;
+        } else {
+            return copy;
         }
+    }
+
+    public static HashMap <String, String> mapShare(HashMap<String, String> map){
+        HashMap<String, String> copy = new HashMap<>(map);
+
+        if (copy.containsKey("a") && !(copy.containsValue(""))){
+            copy.put("b", copy.get("a"));
+            copy.remove("c");
+        }
+        copy.remove("c");
+        return copy;
+    }
+
+    public static HashMap <String, String> mapAB(HashMap<String, String> map) {
+        HashMap<String, String> copy = new HashMap<>(map);
+        if (copy.containsKey("a") && copy.containsKey("b")){
+            copy.put("ab", (copy.get("a") + copy.get("b")));
+        } return copy;
+    }
+
+    public static HashMap <String, String> wordLen(HashMap<String, String> map) {
+        HashMap<String, String> copy = new HashMap<>(map);
+
+        return copy;
     }
 }
 

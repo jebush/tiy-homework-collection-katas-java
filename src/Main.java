@@ -175,7 +175,7 @@ public class Main {
         reverse.add(3);
         ArrayList<Integer> reverseResult = Kata.reverse3(reverse);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse, reverseResult);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse, reverseResult);
 
         ArrayList<Integer> reverse2 = new ArrayList<>();
         reverse2.add(5);
@@ -183,7 +183,7 @@ public class Main {
         reverse2.add(9);
         ArrayList<Integer> reverseResult2 = Kata.reverse3(reverse2);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse2, reverseResult2);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse2, reverseResult2);
 
         ArrayList<Integer> reverse3 = new ArrayList<>();
         reverse3.add(7);
@@ -191,7 +191,7 @@ public class Main {
         reverse3.add(0);
         ArrayList<Integer> reverseResult3 = Kata.reverse3(reverse3);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse3, reverseResult3);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse3, reverseResult3);
 
         ArrayList<Integer> reverse4 = new ArrayList<>();
         reverse4.add(23);
@@ -199,7 +199,7 @@ public class Main {
         reverse4.add(3);
         ArrayList<Integer> reverseResult4 = Kata.reverse3(reverse4);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse4, reverseResult4);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse4, reverseResult4);
 
         ArrayList<Integer> reverse5 = new ArrayList<>();
         reverse5.add(23);
@@ -207,7 +207,7 @@ public class Main {
         reverse5.add(33);
         ArrayList<Integer> reverseResult5 = Kata.reverse3(reverse5);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse5, reverseResult5);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse5, reverseResult5);
 
         ArrayList<Integer> reverse6 = new ArrayList<>();
         reverse6.add(23);
@@ -215,7 +215,7 @@ public class Main {
         reverse6.add(53);
         ArrayList<Integer> reverseResult6 = Kata.reverse3(reverse6);
 
-        System.out.printf("Kata.reverse(%s) -> %s\n", reverse6, reverseResult6);
+        System.out.printf("Kata.reverse3(%s) -> %s\n", reverse6, reverseResult6);
 
 
         //
@@ -277,9 +277,137 @@ public class Main {
         HashMap<String, String> data = new HashMap<>();
         data.put("b", "dirt");
         data.put("a", "candy");
-        HashMap<String, String> dataResult = Kata.mapBully(data);
 
-        System.out.printf("Kata.mapBully(%s) -> %s\n", data, dataResult);
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data,  Kata.mapBully(data));
+
+        HashMap<String, String> data2 = new HashMap<>();
+        data2.put("a", "candy");
+
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data2,  Kata.mapBully(data2));
+
+        HashMap<String, String> data3 = new HashMap<>();
+        data3.put("b", "carrot");
+        data3.put("c", "meh");
+        data3.put("a", "candy");
+
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data3,  Kata.mapBully(data3));
+
+        HashMap<String, String> data4 = new HashMap<>();
+        data4.put("b", "");
+        data4.put("a", "candy");
+
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data4,  Kata.mapBully(data4));
+
+        HashMap<String, String> data5 = new HashMap<>();
+        data5.put("b", "dirt");
+        data5.put("a", "");
+
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data5,  Kata.mapBully(data5));
+
+        HashMap<String, String> data6 = new HashMap<>();
+        data6.put("b", "dirt");
+        data6.put("a", "randy");
+
+
+        System.out.printf("Kata.mapBully(%s) -> %s\n", data6,  Kata.mapBully(data6));
+
+        //
+        //Map Share
+        //
+
+        HashMap<String, String> share = new HashMap<>();
+        share.put("b", "bbb");
+        share.put("c", "ccc");
+        share.put("a", "aaa");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share,  Kata.mapShare(share));
+
+        HashMap<String, String> share2 = new HashMap<>();
+        share2.put("b", "xyz");
+        share2.put("c", "ccc");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share2,  Kata.mapShare(share2));
+
+        HashMap<String, String> share3 = new HashMap<>();
+        share3.put("d", "grr");
+        share3.put("c", "meh");
+        share3.put("a", "aaa");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share3,  Kata.mapShare(share3));
+
+        HashMap<String, String> share4 = new HashMap<>();
+        share4.put("d", "hi");
+        share4.put("c", "meh");
+        share4.put("a", "aaa");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share4,  Kata.mapShare(share4));
+
+        HashMap<String, String> share5 = new HashMap<>();
+        share5.put("d", "hi");
+        share5.put("c", "haha");
+        share5.put("a", "dude");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share5,  Kata.mapShare(share5));
+
+        HashMap<String, String> share6 = new HashMap<>();
+        share6.put("bb", "dkd");
+        share6.put("c", "waat");
+        share6.put("a", "aaa");
+
+
+        System.out.printf("Kata.mapShare(%s) -> %s\n", share6,  Kata.mapShare(share6));
+
+        //
+        //Map AB
+        //
+        HashMap<String, String> mapAB = new HashMap<>();
+        mapAB.put("b", "There");
+        mapAB.put("a", "Hi");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB,  Kata.mapAB(mapAB));
+
+        HashMap<String, String> mapAB2 = new HashMap<>();
+        mapAB2.put("a", "Hi");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB2,  Kata.mapAB(mapAB2));
+
+        HashMap<String, String> mapAB3 = new HashMap<>();
+        mapAB3.put("b", "There");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB3,  Kata.mapAB(mapAB3));
+
+        HashMap<String, String> mapAB4 = new HashMap<>();
+        mapAB4.put("b", "dude");
+        mapAB4.put("a", "Hi");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB4,  Kata.mapAB(mapAB4));
+
+        HashMap<String, String> mapAB5 = new HashMap<>();
+        mapAB5.put("a", "HWoahi");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB5,  Kata.mapAB(mapAB5));
+
+        HashMap<String, String> mapAB6 = new HashMap<>();
+        mapAB6.put("b", "bear");
+        mapAB6.put("a", "tassles");
+
+
+        System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB6,  Kata.mapAB(mapAB6));
 
     }
 }
