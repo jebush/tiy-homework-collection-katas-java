@@ -90,9 +90,28 @@ public class Kata {
         } return copy;
     }
 
-    public static HashMap <String, String> wordLen(HashMap<String, String> map) {
-        HashMap<String, String> copy = new HashMap<>(map);
+    public static HashMap <String, Integer> wordLen(ArrayList<String> word) {
+        HashMap<String, Integer> copy = new HashMap<>();
 
+        for(String words: word){
+            copy.put(words, words.length());
+        }
+        return copy;
+    }
+
+    public static HashMap <String, ArrayList<String>> indexWords(ArrayList<String> word) {
+        HashMap<String, ArrayList<String>> copy = new HashMap<>();
+
+        for (String words : word) {
+            if (!word.isEmpty() && !(words == "") && !copy.containsKey(words.substring(0, 1))) {
+                copy.put(words.substring(0, 1), new ArrayList<>());
+                copy.get(words.substring(0,1)).add(words);
+            } else if (!word.isEmpty() && !(words == "") && copy.containsKey(words.substring(0, 1))){
+                copy.get(words.substring(0,1)).add(words);
+            } else {
+                return copy;
+            }
+        }
         return copy;
     }
 }

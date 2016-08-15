@@ -409,5 +409,120 @@ public class Main {
 
         System.out.printf("Kata.mapAB(%s) -> %s\n", mapAB6,  Kata.mapAB(mapAB6));
 
+        //
+        //Word Length
+        //
+        ArrayList<String> word = new ArrayList<>();
+        word.add("a");
+        word.add("bb");
+        word.add("a");
+        word.add("bb");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word,  Kata.wordLen(word));
+
+        ArrayList<String> word2 = new ArrayList<>();
+        word2.add("this");
+        word2.add("and");
+        word2.add("that");
+        word2.add("and");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word2,  Kata.wordLen(word2));
+
+        ArrayList<String> word3 = new ArrayList<>();
+        word3.add("code");
+        word3.add("code");
+        word3.add("code");
+        word3.add("bug");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word3,  Kata.wordLen(word3));
+
+        ArrayList<String> word4 = new ArrayList<>();
+        word4.add("lkjsd");
+        word4.add("this");
+        word4.add("dude");
+        word4.add("car");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word4,  Kata.wordLen(word4));
+
+        ArrayList<String> word5 = new ArrayList<>();
+        word5.add("ballin");
+        word5.add("this is s");
+        word5.add("ldld");
+        word5.add("bab");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word5,  Kata.wordLen(word5));
+
+        ArrayList<String> word6 = new ArrayList<>();
+        word6.add("a");
+        word6.add("window");
+        word6.add("bubba");
+        word6.add("thisiskd");
+
+        System.out.printf("Kata.wordLen(%s) -> %s\n", word6,  Kata.wordLen(word6));
+
+        //
+        //Index Words
+        //
+        ArrayList<String> index = new ArrayList<>();
+        index.add("aardvark");
+        index.add("apple");
+        index.add("zamboni");
+        index.add("phone");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index,  Kata.indexWords(index));
+
+        //
+        ArrayList<String> index2 = new ArrayList<>();
+        index2.add("elephant");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index2,  Kata.indexWords(index2));
+
+        //
+        ArrayList<String> index3 = new ArrayList<>();
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index3,  Kata.indexWords(index3));
+
+        //
+        ArrayList<String> index4 = new ArrayList<>();
+        index4.add("");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index4,  Kata.indexWords(index4));
+
+        //
+        ArrayList<String> index5 = new ArrayList<>();
+        index5.add("a");
+        index5.add("window");
+        index5.add("bubba");
+        index5.add("bbubba");
+        index5.add("thisiskd");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index5,  Kata.indexWords(index5));
+
+        //
+        ArrayList<String> index6 = new ArrayList<>();
+        index6.add("ba");
+        index6.add("bindow");
+        index6.add("bubba");
+        index6.add("bbubba");
+        index6.add("");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index6,  Kata.indexWords(index6));
+
+        //
+        ArrayList<String> index7 = new ArrayList<>();
+        index7.add("a");
+        index7.add("dingle");
+        index7.add("baah");
+        index7.add("bbubba");
+        index7.add("woah");
+
+
+        System.out.printf("Kata.indexWords(%s) -> %s\n", index7,  Kata.indexWords(index7));
     }
 }
